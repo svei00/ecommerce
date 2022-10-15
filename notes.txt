@@ -1,0 +1,5 @@
+01. Create Next Project with: npx create-next-app app-name
+02. Install Sanity CLI: npm install -g @sanity/cli
+03. You can start the project with Yarn (native in Nextjs) or npm: yarn run dev or npm run dev
+04. Install Tailwindcss: npm install -D tailwindcss postcss autoprefixer
+05. Then run npx tailwindcss init -p to generate the dependencies: npx tailwindcss init -p
