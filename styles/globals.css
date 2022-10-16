@@ -1,4 +1,33 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .headerLink {
+    @apply
+    cursor-pointer
+    opacity-75
+    transition
+    hover:opacity-100 
+    hover:font-bold
+  }
+
+  .headerIcon {
+    @apply
+    h-6
+    w-6
+    cursor-pointer
+    opacity-75
+    transition
+    hover:opacity-100
+    hover:font-bold
+    hover:h-7
+    hover:w-7
+    hover:text-yellow-900
+  }
+}
+
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -23,4 +52,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */

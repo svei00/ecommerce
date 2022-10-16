@@ -3,3 +3,11 @@
 03. You can start the project with Yarn (native in Nextjs) or npm: yarn run dev or npm run dev
 04. Install Tailwindcss: npm install -D tailwindcss postcss autoprefixer
 05. Then run npx tailwindcss init -p to generate the dependencies: npx tailwindcss init -p
+06. Initialice Sanity with: sanity init.
+    a. Choose the type of Database.
+    b. Write the name.
+    c. Chose the dataset (there are two the default which is production and development)
+    d. Chose the templete if you want
+    e. Say no if you don't want sample information. 
+07. Install Tailwind with prettier: npm install -D prettier prettier-plugin-tailwindcss
+08. Install Hero Icons: npm install @heroicons/react
