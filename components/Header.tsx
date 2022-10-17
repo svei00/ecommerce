@@ -2,9 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import felix from '../assets/images/felix-logo.png';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
+import boxer from '../assets/images/boxer.jpg'
+import { MagnifyingGlassIcon, ShoppingCartIcon, UserIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
+
+    const session = false;
+
   return (
     <header className='sticky top-0 z-30 flex w-full items-center justify-between bg-[#E7ECEE] p-4'>
         <div className='flex items-center justify-center md:w-1/5'>
@@ -26,8 +30,36 @@ const Header = () => {
             <a className='headerLink'>History</a>
             <a className='headerLink'>Business</a>
         </div>
-        <div className=''>
+        <div className='flex items-center justify-center gap-x-4 md:w-1/5'>
             <MagnifyingGlassIcon className='headerIcon' />
+                <Link href='/checkout'>
+                    <div className='relative cursor-pointer'>
+                        <span className='absolute -rigth-1 -top-1 z-50 flex h-4 w-4 items-center justify-center rounded-full
+                        bg-gradient-to-r from from-blue-300 via-blue-500 to bg-purple-700 text-[10px] text-[#fee8d6]'>
+                            48    
+                        </span>
+                        <ShoppingCartIcon className='headerIcon' />
+                    </div>
+                </Link>
+
+                {session ? (
+                    <Image 
+                        src={
+                            // session.user?.image ||
+                            {boxer}
+                        }
+                        alt='Avatar'
+                        className='cursor-pointer rounded-full'
+                        width={34}
+                        height={34}
+                        // onClick{() => signOut()}
+                    />
+                ) : ( 
+                    <UserIcon 
+                        className='headerIcon'
+                        // onClick={() => signIn()}
+                    />
+                )}
         </div>     
     </header> 
   )

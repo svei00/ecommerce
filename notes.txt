@@ -11,3 +11,14 @@
     e. Say no if you don't want sample information. 
 07. Install Tailwind with prettier: npm install -D prettier prettier-plugin-tailwindcss
 08. Install Hero Icons: npm install @heroicons/react
+09. Install ReactIcons: npm install react-icons --save
+10. You can Add fonts from another soucers like Google: https://fonts.google.com/specimen/Poppins#styles
+    a. Then go to tailwind.config.js
+    b. In theme, extends add:
+    c. theme: {
+        extend: {
+            fontFamily: {
+                poppins: ['Poppins', 'sans-serif'],
+                },
+            },
+        },

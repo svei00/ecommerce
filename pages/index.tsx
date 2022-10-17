@@ -1,7 +1,9 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
+import Landing from '../components/Landing'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,8 +15,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <h1> Iv&aacute;n E. Villanueva</h1>
-
+      <main>
+        <Landing />
+      </main>
+      <Footer />
     </div>
   )
 }
