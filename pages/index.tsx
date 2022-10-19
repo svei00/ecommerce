@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Landing from '../components/Landing'
+import Tabs from '../components/Tabs'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -15,9 +16,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main>
+      <main className='relative h-[200vh] bg-white'>
         <Landing />
       </main>
+      <section className='relative z-40 -mt-[100vh] min-h-screen bg-[#181818]'>
+        <div className='space-y-10 py-16'>
+          <h1 className='text-center text-4xl font-medium tracking-wide text-white'>New Promos</h1>
+          <Tabs />
+        </div>
+      </section>
       <Footer />
     </div>
   )

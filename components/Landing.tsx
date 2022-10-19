@@ -13,8 +13,8 @@ const Landing = () => {
                 <span className='block'>Your pet our passion</span>
             </h1>
 
-            <div>
-                <Button title='Buy Now!!' />
+            <div className='space-x-8'>
+                <Button title='🐶 Buy Now!!' />
                 <a href="" className='link'>Learn More.</a>
             </div>
         </div>
