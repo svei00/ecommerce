@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Tab } from '@headlessui/react'
+import {GiSniffingDog} from 'react-icons/gi'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

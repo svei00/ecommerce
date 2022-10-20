@@ -22,4 +22,10 @@
                 },
             },
         },
-11. Install Headless library: npm install @headlessui/react@latest
+11. Install Headless library: npm install @headlessui/react@latest reference: https://headlessui.com/
+12. Setup Sanity:
+    a. Get the name of the dataset from sanity.io datasets/title
+    b. Project ID is in main page PROJECT ID
+    c. Generate the token in API go to TOKENS then add API TOKEN select the name like project_name
+       select editor access then generate.
+13. You can generate secret keys on: https://generate-secret.vercel.app/64 You can put 8/16/32/64...
