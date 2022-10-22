@@ -29,3 +29,27 @@
     c. Generate the token in API go to TOKENS then add API TOKEN select the name like project_name
        select editor access then generate.
 13. You can generate secret keys on: https://generate-secret.vercel.app/64 You can put 8/16/32/64...
+14. GROQ (Grapph ql Query) Check some examples of querying on 2:26.
+    *[_type == 'category'] {
+        _id,
+         slug,
+         title
+    }
+
+    // Only id
+    *[_type == 'category'] {
+        _id,
+    }
+
+    // All the elements
+    *[_type == 'category'] {
+        _id,
+         ...
+    }
+
+15. Install Sanity io tookit image-url for Nextjs Very important. Remember to install in the main directory not in sanity directory:
+    npm install next-sanity @portabletext/react @sanity/image-url
+
+References:
+* https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
+* https://github.com/sanity-io/next-sanity

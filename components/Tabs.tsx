@@ -1,70 +1,85 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Tab } from '@headlessui/react'
 import {GiSniffingDog} from 'react-icons/gi'
+import { fetchCategories } from '../assets/js/fetchCategories'
+import { GetServerSideProps } from 'next'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Tabs() {
-  let [categories] = useState({
-    Dogs: [
-      {
-        id: 1,
-        title: 'Does drinking coffee make you smarter?',
-        date: '5h ago',
-        commentCount: 5,
-        shareCount: 2,
-      },
-      {
-        id: 2,
-        title: "So you've bought coffee... now what?",
-        date: '2h ago',
-        commentCount: 3,
-        shareCount: 2,
-      },
-    ],
-    Cats: [
-      {
-        id: 1,
-        title: 'Is tech making coffee better or worse?',
-        date: 'Jan 7',
-        commentCount: 29,
-        shareCount: 16,
-      },
-      {
-        id: 2,
-        title: 'The most innovative things happening in coffee',
-        date: 'Mar 19',
-        commentCount: 24,
-        shareCount: 12,
-      },
-    ],
-    Accesories: [
-      {
-        id: 1,
-        title: 'Ask Me Anything: 10 answers to your questions about coffee',
-        date: '2d ago',
-        commentCount: 9,
-        shareCount: 5,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        date: '4d ago',
-        commentCount: 1,
-        shareCount: 2,
-      },
-    ],
-  })
+   const [categories, setCategories] = useState([]);
+
+   useEffect(() => {
+    fetch(fetchCategories())
+      .then((res) => res.json())
+      .then((data) => {
+        setCategories(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  //   Dogs: [
+  //     {
+  //       id: 1,
+  //       title: 'Does drinking coffee make you smarter?',
+  //       date: '5h ago',
+  //       commentCount: 5,
+  //       shareCount: 2,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "So you've bought coffee... now what?",
+  //       date: '2h ago',
+  //       commentCount: 3,
+  //       shareCount: 2,
+  //     },
+  //   ],
+  //   Cats: [
+  //     {
+  //       id: 1,
+  //       title: 'Is tech making coffee better or worse?',
+  //       date: 'Jan 7',
+  //       commentCount: 29,
+  //       shareCount: 16,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: 'The most innovative things happening in coffee',
+  //       date: 'Mar 19',
+  //       commentCount: 24,
+  //       shareCount: 12,
+  //     },
+  //   ],
+  //   Accesories: [
+  //     {
+  //       id: 1,
+  //       title: 'Ask Me Anything: 10 answers to your questions about coffee',
+  //       date: '2d ago',
+  //       commentCount: 9,
+  //       shareCount: 5,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "The worst advice we've ever heard about coffee",
+  //       date: '4d ago',
+  //       commentCount: 1,
+  //       shareCount: 2,
+  //     },
+  //   ],
+  // })
 
   return (
     <div className="w-full max-w-md px-2 py-16 sm:px-0">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-          {Object.keys(categories).map((category) => (
+        <Tab.List className="flex justify-center">
+          {categories.map((category) => (
             <Tab
-              key={category}
+              id={category._id}
+              key={category._id}
               className={({ selected }) =>
                 classNames(
                   'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
@@ -75,7 +90,7 @@ export default function Tabs() {
                 )
               }
             >
-              {category}
+              {category.title}
             </Tab>
           ))}
         </Tab.List>
