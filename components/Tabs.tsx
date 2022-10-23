@@ -12,7 +12,7 @@ export default function Tabs() {
    const [categories, setCategories] = useState([]);
 
    useEffect(() => {
-    fetch(fetchCategories())
+    fetch(fetchCategories)
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);

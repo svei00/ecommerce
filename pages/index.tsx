@@ -6,14 +6,18 @@ import Header from '../components/Header'
 import Landing from '../components/Landing'
 import Tabs from '../components/Tabs'
 import { Tab } from '@headlessui/react'
+import { fetchProducts } from '../assets/js/fetchProducts'
 
 interface Props {
   categories: Category[];
+  products: Product[];
+
 }
 
-const Home = ({ categories }: Props ) => {
+const Home = ({ categories, products }: Props ) => {
 
-  console.log(categories);
+  // console.log(categories);
+  console.log(products);
 
   return (
     <div className=''>
@@ -66,10 +70,12 @@ export default Home;
 // Backend Code:
 export const getServerSideProps: GetServerSideProps<Props> = async() => {
   const categories = await fetchCategories();
+  const products = await fetchProducts();
   
   return {
     props:{
       categories,
+      products,
     },
   };
 };

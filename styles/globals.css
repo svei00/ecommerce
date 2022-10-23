@@ -55,6 +55,14 @@
     before:duration-200
     hover:before:scale-100;
   }
+
+  .borderGradient{
+    text-align: center;
+    padding-bottom: 5px;
+    background: linear-gradient(to right, red, yellow, black) left bottom no-repeat;
+    background-size: 100% 2px;
+
+  }
 }
 
 /* html,
