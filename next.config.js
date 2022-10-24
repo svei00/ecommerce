@@ -1,10 +1,19 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  images: {
-    domains: ['/assets/images'] // In case to load images from http need to put the domain ex. informador.mx
-  }
-}
+// const nextConfig = {
+//   reactStrictMode: true,
+//   swcMinify: true,
+//   images: {
+//     domains: ['/assets/images', 'cdn.sanity.io'], // In case to load images from http need to put the domain ex. informador.mx
+//   }
+// }
 
-module.exports = nextConfig
+const { ModuleKind } = require('typescript');
+
+// module.exports = nextConfig
+
+module.exports = {
+  reactStrickmode: true,
+  images: {
+    domains: ['/assets/images', 'cdn.sanity.io'], // In case to load images from http need to put the domain ex. informador.mx
+  },
+};

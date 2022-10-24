@@ -16,7 +16,7 @@ interface Category {
 // rehuse the code this is a better option.
 interface Image {
     _key: string;
-    _type: string;
+    _type: 'image';
     asset: {
         url: string;
     };
@@ -28,6 +28,8 @@ interface Product {
     _updatedAt: string;
     _rev: string;
     _type: 'product';
+    title: string;
+    price: number;
 
     slug: {
         _type: 'slug';

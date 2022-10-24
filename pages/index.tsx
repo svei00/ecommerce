@@ -7,6 +7,7 @@ import Landing from '../components/Landing'
 import Tabs from '../components/Tabs'
 import { Tab } from '@headlessui/react'
 import { fetchProducts } from '../assets/js/fetchProducts'
+import Product from '../components/Product'
 
 interface Props {
   categories: Category[];
@@ -18,6 +19,12 @@ const Home = ({ categories, products }: Props ) => {
 
   // console.log(categories);
   console.log(products);
+
+  const showProducts = (category: number) => {
+    return products
+    .filter((product) => product.category._ref === categories[category]._id)
+    .map((product) => <Product product={product} key={product._id} />); // filter products by category
+  };
 
   return (
     <div className=''>
@@ -51,12 +58,12 @@ const Home = ({ categories, products }: Props ) => {
                 </Tab>
               ))}
             </Tab.List>
-            {/* <Tab.Panels className="mx-auto max-w-fit pt-10 pb-24 sm:px-4">
+              <Tab.Panels className="mx-auto max-w-fit pt-10 pb-24 sm:px-4">
               <Tab.Panel className="tabPanel">{showProducts(0)}</Tab.Panel>
               <Tab.Panel className="tabPanel">{showProducts(1)}</Tab.Panel>
               <Tab.Panel className="tabPanel">{showProducts(2)}</Tab.Panel>
               <Tab.Panel className="tabPanel">{showProducts(3)}</Tab.Panel>
-            </Tab.Panels> */}
+            </Tab.Panels> 
           </Tab.Group>
         </div>
       </section>
