@@ -3,6 +3,9 @@ import React from 'react'
 import { urlFor } from '../sanity'
 import CurrencyFormat from 'react-currency-format'
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../redux/basketSlice';
+import toast from 'react-hot-toast';
 
 interface Props {
     product: Product;
@@ -10,8 +13,17 @@ interface Props {
 
 function Product ({ product }: Props) {
 
+    const dispatch = useDispatch();
+
     const addItemToBasquet = () => {
-        window.alert("Nothing happens here =(");
+        // window.alert("Nothing happens here =(");
+        dispatch(addToBasket(product));
+
+        toast(`${product.title} added to shopping cart`, {
+            position: 'top-center',
+            icon: '😸',
+            // Also you can change the style with css just add className
+        });
     };
     
 

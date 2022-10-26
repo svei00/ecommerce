@@ -4,10 +4,13 @@ import React from 'react';
 import felix from '../assets/images/felix-logo.png';
 import boxer from '../assets/images/boxer.jpg'
 import { MagnifyingGlassIcon, ShoppingCartIcon, UserIcon } from '@heroicons/react/24/outline';
+import { useSelector } from 'react-redux';
+import { selectBasketItems } from '../redux/basketSlice';
 
 const Header = () => {
 
     const session = false;
+    const items = useSelector(selectBasketItems);
 
   return (
     <header className='sticky top-0 z-30 flex w-full items-center justify-between bg-[#E7ECEE] p-4'>
@@ -36,7 +39,7 @@ const Header = () => {
                     <div className='relative cursor-pointer'>
                         <span className='absolute -rigth-1 -top-1 z-50 flex h-4 w-4 items-center justify-center rounded-full
                         bg-gradient-to-r from from-blue-300 via-blue-500 to bg-purple-700 text-[10px] text-[#fee8d6]'>
-                            48    
+                            {items.length}    
                         </span>
                         <ShoppingCartIcon className='headerIcon' />
                     </div>

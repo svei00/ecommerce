@@ -54,8 +54,11 @@
 18. Install Redux Toolkit which give us more beneficts:
     a. Install Redux: npm install @reduxjs/toolkit or yarn add @reduxjs/toolkit
     b. Install React/Redux: npm install @reduxjs/toolkit react-redux or yarn add @reduxjs/toolkit react-redux
+19. We'll need to install React Hot Toast:
+    yarn add react-hot-toast
 
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
 * https://github.com/sanity-io/next-sanity
 * https://redux.js.org/introduction/getting-started
+* https://react-hot-toast.com/

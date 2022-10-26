@@ -8,6 +8,7 @@ import Tabs from '../components/Tabs'
 import { Tab } from '@headlessui/react'
 import { fetchProducts } from '../assets/js/fetchProducts'
 import Product from '../components/Product'
+import Basket from '../components/Basket'
 
 interface Props {
   categories: Category[];
@@ -34,6 +35,7 @@ const Home = ({ categories, products }: Props ) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <Basket />
       <main className='relative h-[200vh] bg-white'>
         <Landing />
       </main>
