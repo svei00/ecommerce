@@ -37,10 +37,12 @@ const Header = () => {
             <MagnifyingGlassIcon className='headerIcon' />
                 <Link href='/checkout'>
                     <div className='relative cursor-pointer'>
-                        <span className='absolute -rigth-1 -top-1 z-50 flex h-4 w-4 items-center justify-center rounded-full
-                        bg-gradient-to-r from from-blue-300 via-blue-500 to bg-purple-700 text-[10px] text-[#fee8d6]'>
-                            {items.length}    
-                        </span>
+                        {items.length > 0 && (
+                            <span className='absolute -rigth-1 -top-1 z-50 flex h-4 w-4 items-center justify-center rounded-full
+                            bg-gradient-to-r from from-blue-300 via-blue-500 to bg-purple-700 text-[10px] text-[#fee8d6]'>
+                                {items.length}    
+                            </span>
+                        )}
                         <ShoppingCartIcon className='headerIcon' />
                     </div>
                 </Link>
