@@ -50,6 +50,7 @@
 15. Install Sanity io tookit image-url for Nextjs Very important. Remember to install in the main directory not in sanity directory:
     npm install next-sanity @portabletext/react @sanity/image-url
 16. Install react-currency-format: npm install react-currency-format --save
+    Also you can install yarn add -D @types/react-currency-formatter
 17. Create Stripe account and get publishable key and secret key.
 18. Install Redux Toolkit which give us more beneficts:
     a. Install Redux: npm install @reduxjs/toolkit or yarn add @reduxjs/toolkit
