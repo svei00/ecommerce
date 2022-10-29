@@ -57,9 +57,15 @@
     b. Install React/Redux: npm install @reduxjs/toolkit react-redux or yarn add @reduxjs/toolkit react-redux
 19. We'll need to install React Hot Toast:
     yarn add react-hot-toast
+20. Installing stripe package in order to run the checkout
+    a. npm install @stripe/stripe-js stripe or via yarn
+    b. yarn add @stripe/stripe-js stripe
+    c. Then create/import file api-helpers.ts: https://github.com/vercel/next.js/blob/canary/examples/with-stripe-typescript/utils/api-helpers.ts
+    d. Add file get-Stripejs. Intructions: https://github.com/vercel/next.js/blob/canary/examples/with-stripe-typescript/utils/get-stripejs.ts
 
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
 * https://github.com/sanity-io/next-sanity
 * https://redux.js.org/introduction/getting-started
 * https://react-hot-toast.com/
+* https://vercel.com/guides/getting-started-with-nextjs-typescript-stripe
