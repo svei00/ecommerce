@@ -153,7 +153,7 @@ function Checkout() {
                                         </h4>
                                         <Button 
                                             noIcon
-                                            loading={'Puto el que lo lea!!'}
+                                            loading={loading}
                                             title='Check Out'
                                             width='w-full'
                                             onClick={createCheckoutSession}
