@@ -63,6 +63,8 @@
     c. Then create/import file api-helpers.ts: https://github.com/vercel/next.js/blob/canary/examples/with-stripe-typescript/utils/api-helpers.ts
     d. Add file get-Stripejs. Intructions: https://github.com/vercel/next.js/blob/canary/examples/with-stripe-typescript/utils/get-stripejs.ts
     e. On File checkout_sessions.ts: https://github.com/stripe/stripe-node#configuration
+21. Install the library react-responsive:
+    a. npm install react-responsive --save or via yarn: yarn add react-responsive
 
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
@@ -71,3 +73,4 @@ References:
 * https://react-hot-toast.com/
 * https://vercel.com/guides/getting-started-with-nextjs-typescript-stripe
 * https://github.com/stripe/stripe-node#configuration
+* https://nextjs.org/docs/api-routes/introduction
