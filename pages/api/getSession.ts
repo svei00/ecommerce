@@ -8,7 +8,7 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const session_id = req.query.session_id as string;
+    const sessionId = req.query.session_id as string;
 
     const session = await stripe.checkout.sessions.listLineItems(sessionId);
 

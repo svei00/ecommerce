@@ -10,21 +10,25 @@ import Button from '../components/Button';
 import Footer from '../components/Footer';
 import Currency from 'react-currency-format';
 import { GetServerSideProps } from 'next';
+import { fetchLineItems } from '../assets/js/fetchLineItems';
 
 interface Props {
     products: StripeProduct[];
 }
 
-function Success () {
+function Success ({ products }: Props) {
     // Access to the Session ID
+
+    console.log(products);
+
     const router = useRouter();
     const { session_id } = router.query;
     const [mounted, setMounted] = useState(false);
     const [showOrderSummary, setShowOrderSummary] = useState(false);
-    // const subtotal = products.reduce (
-    //     (acc, product) => acc + product.price.unit_amount / 100,
-    //     0
-    // );
+    const subtotal = products.reduce (
+        (acc, product) => acc + product.price.unit_amount / 100,
+        0
+    );
 
     useEffect(() => {
         setMounted(true);
@@ -130,16 +134,16 @@ function Success () {
                                     <ChevronDownIcon className='h-4 w-4' />
                                 )}
                             </button>
-                            {/* <p classname='text-xl font-medium text-black'>
+                            <p className='text-xl font-medium text-black'>
                                 <Currency value={subtotal + (subtotal * 0.16)} displayType={'text'} decimalSeparator="." decimalScale={2} thousandSeparator={true}  fixedDecimalScale={true} prefix={'$'}/>
-                            </p> */}
+                            </p>
                         </div>
                     </div>
 
                     {showOrderSummaryCondition && (
                         <div>
                             <div>
-
+                                Here we gotl!
                             </div>
                         </div>
                     )}
@@ -157,12 +161,12 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     query, 
 }) => {
     
-    const sessionId = query.session_id as string
-    // const products = await fetchLineItems(sessionId)
+    const sessionId = query.session_id as string;
+    const products = await fetchLineItems(sessionId);
     
     return {
         props: {
-
+            products,
         },
     };
 };
