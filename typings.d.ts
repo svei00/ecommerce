@@ -55,7 +55,7 @@ interface StripeProduct {
     description: string, 
     object: string,
     quantity: number,
-    proce: {
+    price: {
         unit_amount: number,
     };
 }

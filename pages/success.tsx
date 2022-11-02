@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import Currency from 'react-currency-format';
 import { GetServerSideProps } from 'next';
 import { fetchLineItems } from '../assets/js/fetchLineItems';
+import { urlFor } from '../sanity';
 
 interface Props {
     products: StripeProduct[];
@@ -141,11 +142,63 @@ function Success ({ products }: Props) {
                     </div>
 
                     {showOrderSummaryCondition && (
-                        <div>
-                            <div>
-                                Here we gotl!
+                        <div className=''>
+                            <div className=''>
+                                {products.map((product) => (
+                                <div
+                                    key={product.id}
+                                    className='flex items-center space-x-4 text-sm font-medium'
+                                >
+                                        <div className='relative flex h-16 w-16 items-center justify-center rounded-md border border-gray-300 bg-[#F1F1F1] text-xs text-white'>
+                                            <div className='relative h-7 w-7 animate-bounce rounded-md'>
+                                                <Image 
+                                                    src={felix}
+                                                    layout='fill'
+                                                    objectFit='contain'
+                                                    alt='Products'               
+                                                />
+                                            </div>
+                                            <div className='absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[gray] text-xs'>
+                                                {product.quantity}
+                                            </div>
+                                        </div>
+                                        <p className='flex-1'>{product.description}</p>
+                                        <p>
+                                            <Currency value={product.price.unit_amount / 100} displayType={'text'} decimalSeparator="." decimalScale={2} thousandSeparator={true}  fixedDecimalScale={true} prefix={'$'}/>
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
-                        </div>
+                            <div className='space-y-1 py-4'>
+                                <div className='flex justify-between text-sm'>
+                                    <p className='text-[gray]'>Subtotal</p>
+                                    <p className='font-medium'>
+                                        <Currency value={subtotal} displayType={'text'} decimalSeparator="." decimalScale={2} thousandSeparator={true}  fixedDecimalScale={true} prefix={'$'}/>
+                                    </p>
+                                </div>
+                                <div className='flex justify-between text-sm'>
+                                    <p className='text-[gray]'>Discount</p>
+                                    <p className='font-medium'>
+                                        {/* <Currency value={subtotal} displayType={'text'} decimalSeparator="." decimalScale={2} thousandSeparator={true}  fixedDecimalScale={true} prefix={'$'}/> */}
+                                    </p>
+                                </div>
+                                <div className='flex justify-between text-sm'>
+                                    <p className='text-[gray]'>Shipping</p>
+                                    <p className='font-medium'>
+                                        <Currency value={subtotal * .05} displayType={'text'} decimalSeparator="." decimalScale={2} thousandSeparator={true}  fixedDecimalScale={true} prefix={'$'}/>
+                                    </p>
+                                </div>
+                            </div>
+                                <div className='flex justify-between pt-4'>
+                                    <p className='text-[black]'>Total</p>
+                                    <p 
+                                        className='flex items-center gap-x-2 text-xs text-[grey]'>MXP
+                                        <span>
+                                            <Currency value={subtotal + (subtotal * .05)} displayType={'text'} decimalSeparator="." decimalScale={2} thousandSeparator={true}  fixedDecimalScale={true} prefix={'$'}/>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
                     )}
                 </section>
             )}
