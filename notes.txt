@@ -65,6 +65,10 @@
     e. On File checkout_sessions.ts: https://github.com/stripe/stripe-node#configuration
 21. Install the library react-responsive:
     a. npm install react-responsive --save or via yarn: yarn add react-responsive
+22. Instal Next-Auth in order to create our login process.
+    a. npm install next-auth or also via yarn yarn add next-auth
+    b. Create folder insede pages/api folder call: auth
+    c. Add file [...nextauth].js in the auth folder
 
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
@@ -74,3 +78,5 @@ References:
 * https://vercel.com/guides/getting-started-with-nextjs-typescript-stripe
 * https://github.com/stripe/stripe-node#configuration
 * https://nextjs.org/docs/api-routes/introduction
+* https://next-auth.js.org/
+* https://stackoverflow.com/questions/73668032/nextauth-type-error-property-session-does-not-exist-on-type
