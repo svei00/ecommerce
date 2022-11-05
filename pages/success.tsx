@@ -12,6 +12,7 @@ import Currency from 'react-currency-format';
 import { GetServerSideProps } from 'next';
 import { fetchLineItems } from '../assets/js/fetchLineItems';
 import { urlFor } from '../sanity';
+import { useSession } from 'next-auth/react';
 
 interface Props {
     products: StripeProduct[];
@@ -30,6 +31,8 @@ function Success ({ products }: Props) {
         (acc, product) => acc + product.price.unit_amount / 100,
         0
     );
+
+    const {data: session} = useSession();
 
     useEffect(() => {
         setMounted(true);
@@ -83,7 +86,7 @@ function Success ({ products }: Props) {
                         <p className='text-sm text-gray-600'>Order #{session_id?.slice(-5)}</p> {/* Brings the las 5 characters */}
                         <h4>
                             Thank you {' '}!!
-                            {/* { session ? session.user?.name?.split(' ')[0] : 'Guest'} */}
+                            { session ? session.user?.name?.split(' ')[0] : ' Guest'}
                         </h4>
                     </div>
                 </div>

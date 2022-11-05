@@ -91,6 +91,8 @@
        - Try to sign in into the app, it will cause an error the hit error details and take the information of request details
          and paste into your web client credentials (Autorized redirect URis.) then paste the localhost into Authorized Javascript
          origins: http://localhost:3000/ and save it.
+24. Install package Next-Auth-Sanity
+    npm: npm i next-auth-sanity or via yarn: yarn add next-auth-sanity
 
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
@@ -102,3 +104,5 @@ References:
 * https://nextjs.org/docs/api-routes/introduction
 * https://next-auth.js.org/
 * https://stackoverflow.com/questions/73668032/nextauth-type-error-property-session-does-not-exist-on-type
+* https://stackoverflow.com/questions/54579728/how-to-get-avatar-for-gmail-user
+* https://www.sanity.io/plugins/next-auth-sanity
