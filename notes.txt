@@ -69,6 +69,28 @@
     a. npm install next-auth or also via yarn yarn add next-auth
     b. Create folder insede pages/api folder call: auth
     c. Add file [...nextauth].js in the auth folder
+23. Getting Google user autentification.
+    a. Go to: cloud.google.com
+    b. Sign in with your account.
+    C. Go to console and then create a new project (clic top left, on the pop up window hit new project) and name it.
+    d. Select the project (Top rigth).
+    e. Go to API & Services, then credentials.
+    f. Configure Consent Screen.
+       - In OAuth go to external since we need the app for external users.
+       - Name the app.
+       - Write the user support email.
+       - Add Developer contact email and save it.
+       - On scoope save and coninue.
+       - On Test user add some if you want if not continue and save.
+       - The hit go to Dashboard.
+    g. Go to the Credentials and Create Credentials top center then OAuth client ID.
+       - In application tipe select Web Application.
+       - In Name you can just leave the default one.
+       - Hit ADD URI bottom (URI stands for Universal Resource Identifier). We're configuring this later when we have the URL.
+       - Then hit CREATE.
+       - Try to sign in into the app, it will cause an error the hit error details and take the information of request details
+         and paste into your web client credentials (Autorized redirect URis.) then paste the localhost into Authorized Javascript
+         origins: http://localhost:3000/ and save it.
 
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
