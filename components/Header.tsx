@@ -52,7 +52,7 @@ const Header = () => {
                     <Image 
                         src={
                             session.user?.image ||
-                            {boxer}
+                            'http://www.gravatar.com/avatar/' + MD5(email) + '.jpg?s=' + size'
                         }
                         alt='Avatar'
                         className='cursor-pointer rounded-full'
