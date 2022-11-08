@@ -52,7 +52,7 @@ const Header = () => {
                     <Image 
                         src={
                             session.user?.image ||
-                            `{boxer}`
+                            '../assets/images/boxer.jpg'
                         }
                         alt='Avatar'
                         className='cursor-pointer rounded-full'

@@ -85,8 +85,8 @@ function Success ({ products }: Props) {
                     <div className='text-lg'>
                         <p className='text-sm text-gray-600'>Order #{session_id?.slice(-5)}</p> {/* Brings the las 5 characters */}
                         <h4>
-                            Thank you {' '}!!
-                            { session ? session.user?.name?.split(' ')[0] : ' Guest'}
+                            Thank you {' '}
+                            { session ? session.user?.name?.split(' ')[0] : ' Guest'}!!
                         </h4>
                     </div>
                 </div>
