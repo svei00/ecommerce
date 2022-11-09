@@ -129,3 +129,4 @@ References:
 * https://stackoverflow.com/questions/73668032/nextauth-type-error-property-session-does-not-exist-on-type
 * https://stackoverflow.com/questions/54579728/how-to-get-avatar-for-gmail-user
 * https://www.sanity.io/plugins/next-auth-sanity
+* https://www.youtube.com/watch?v=ycKnuEciZ2M

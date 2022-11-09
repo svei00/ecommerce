@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <>
         <Header />
-        <div>Puto if you can read this</div>
+        <div>This is just a test.</div>
     </>
   )
 }
