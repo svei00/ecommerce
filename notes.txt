@@ -117,6 +117,8 @@
        - We don't need STRIPE_SIGNING_SECRET
     d. Hit Deploy.
 
+28. yarn add reactstrap
+
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
 * https://github.com/sanity-io/next-sanity
@@ -130,3 +132,4 @@ References:
 * https://stackoverflow.com/questions/54579728/how-to-get-avatar-for-gmail-user
 * https://www.sanity.io/plugins/next-auth-sanity
 * https://www.youtube.com/watch?v=ycKnuEciZ2M
+* https://www.kindacode.com/article/using-tailwind-css-with-font-awesome-icons-a-deep-dive/
