@@ -1,5 +1,4 @@
 import React from 'react'
-import { AiFillInstagram, AiOutlineTwitter, AiFillFacebook } from 'react-icons/ai';
 
 const SocialIcons = ({ Icons }) => {
   return (
@@ -7,12 +6,10 @@ const SocialIcons = ({ Icons }) => {
         {
             Icons.map((icon) => (
               <span
-                key={icon.name} className='p-2 cursor.pointer inline-flex items-center rounded-full bg-gray-700
+                key={icon.name} className='text-red-600 p-2 cursor.pointer inline-flex items-center rounded-full bg-gray-700
                 mx-1.5 text-xl hover:text-gray-100 hover:bg-yellow-600 duration-300'>
-                    <ion-icon name={icon.name} />
-                    <AiFillInstagram className='inline'/>
-              <AiFillFacebook className='inline'/>
-              <AiOutlineTwitter className='inline'/>
+                    <a href={icon.link}>{icon.library}</a>
+                    
                 </span>
             ))
         }

@@ -1,3 +1,5 @@
+import { AiFillInstagram, AiOutlineTwitter, AiFillFacebook, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+
 export const Products = [
     { name: "Drag And Drop", link: "#" },
     { name: "Visual Studio X", link: "#" },
@@ -25,9 +27,9 @@ export const Products = [
   ];
   
   export const Icons = [
-    { name: "logo-facebook", link: "#" },
-    { name: "logo-twitter", link: "#" },
-    { name: "logo-github", link: "#" },
-    { name: "logo-linkedin", link: "#" },
-    { name: "logo-instagram", link: "#" },
+    { name: "Facebook", library: <AiFillFacebook />, link: "http://www.facebook.com" },
+    { name: "Twitter", library: <AiOutlineTwitter />, link: "http://www.twitter.com#" },
+    { name: "Github", library: <AiFillGithub />, link: "http://www.github.com#" },
+    { name: "Linkedin", library: <AiFillLinkedin />, link: "http://www.linkedin.com" },
+    { name: "Instagram", library: <AiFillInstagram />, link: "http://www.instagram.com" },
   ];

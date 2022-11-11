@@ -41,7 +41,7 @@ const Home = ({ categories, products }: Props ) => {
       <main className='relative h-[200vh] bg-white'>
         <Landing />
       </main>
-      <section className='relative z-40 -mt-[100vh] min-h-screen bg-[#181818]'>
+      <section className='relative z-40 -mt-[100vh] min-h-screen bg-[#E7ECEE]'>
         <div className='space-y-10 py-16'>
           <h1 className='text-center text-4xl font-medium tracking-wide text-white'>New Promos</h1>
           <Tab.Group>

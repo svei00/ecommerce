@@ -32,7 +32,7 @@ const Header = () => {
             <a className='headerLink link'>Products</a>
             <a className='headerLink link'>Explore</a>
             <a className='headerLink link'>History</a>
-            <a className='headerLink link'>Business</a>
+            <a className='headerLink link'>Our Mission</a>
         </div>
         <div className='flex items-center justify-center gap-x-4 md:w-1/5'>
             <MagnifyingGlassIcon className='headerIcon' />
