@@ -14,7 +14,7 @@ const Header = () => {
     const items = useSelector(selectBasketItems);
 
   return (
-    <header className='sticky top-0 z-30 flex w-full items-center justify-between bg-[#E7ECEE] p-4'>
+    <header className='sticky top-0 z-30 flex w-full items-center justify-between bg-orange-200 p-4'> {/* #E7ECEE*/}
         <div className='flex items-center justify-center md:w-1/5'>
             <Link href='/'>
                 <div className='relative h-10 w-10 cursor-pointer opacity-50 transition hover:opacity-100'>
@@ -29,10 +29,10 @@ const Header = () => {
             </Link>
         </div>
         <div className='hidden flex-1 items-center justify-center space-x-8 md:flex'>
-            <a className='headerLink link'>Products</a>
-            <a className='headerLink link'>Explore</a>
-            <a className='headerLink link'>History</a>
-            <a className='headerLink link'>Our Mission</a>
+            <a className='headerLink link' href='/products' >Products</a>
+            <a className='headerLink link' href='/explore' >Explore</a>
+            <a className='headerLink link' href='/history' >History</a>
+            <a className='headerLink link' href='/mission' >Our Mission</a>
         </div>
         <div className='flex items-center justify-center gap-x-4 md:w-1/5'>
             <MagnifyingGlassIcon className='headerIcon' />
