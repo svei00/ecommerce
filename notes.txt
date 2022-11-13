@@ -116,7 +116,7 @@
     c. Very important add the enviroment variables like the localhost/3000 (.env file) to the url of your site. Then add one by one
        - We don't need STRIPE_SIGNING_SECRET
     d. Hit Deploy.
-    
+
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
 * https://github.com/sanity-io/next-sanity
@@ -132,3 +132,6 @@ References:
 * https://www.youtube.com/watch?v=ycKnuEciZ2M
 * https://www.kindacode.com/article/using-tailwind-css-with-font-awesome-icons-a-deep-dive/
 * https://stackoverflow.com/questions/53572640/dynamically-load-react-icons-into-component
+* https://webdevstudios.com/2021/12/09/custom-404-page-next-js/
+* https://stackoverflow.com/questions/71506663/how-to-animate-text-gradient-color-change-in-tailwind
+* https://www.kindacode.com/article/tailwind-css-how-to-place-text-over-an-image/
