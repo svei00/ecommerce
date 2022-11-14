@@ -123,6 +123,14 @@
     text-white;
   }
 
+  .underConstruction {
+    @apply
+    fixed
+    m-0
+    text-center
+  
+  }
+
 }
 
 /* html,
