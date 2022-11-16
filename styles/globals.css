@@ -123,12 +123,11 @@
     text-white;
   }
 
-  .underConstruction {
+  .underContainer {
     @apply
-    fixed
-    m-0
-    text-center
-  
+    w-screen
+    h-screen
+    
   }
 
 }

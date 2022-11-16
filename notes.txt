@@ -135,3 +135,5 @@ References:
 * https://webdevstudios.com/2021/12/09/custom-404-page-next-js/
 * https://stackoverflow.com/questions/71506663/how-to-animate-text-gradient-color-change-in-tailwind
 * https://www.kindacode.com/article/tailwind-css-how-to-place-text-over-an-image/
+* https://pxhere.com/en/photo/1637037
+* https://www.javatpoint.com/how-to-remove-background-of-an-image-using-gimp
