@@ -123,11 +123,34 @@
     text-white;
   }
 
+  .underConstruction {
+    @apply
+    relative
+    min-h-screen
+    bg-cover 
+    bg-no-repeat 
+    bg-fixed bg-center
+    bg-[url('../assets/images/background.png')]  
+  }
   .underContainer {
     @apply
-    w-screen
-    h-screen
-    
+    top-1/2
+    absolute
+    -translate-y-1/2
+    h-full 
+    flex 
+    items-center 
+    justify-center
+    block 
+  }
+
+  .underContainer h1 {
+    font-size: 46px;
+  }
+
+  .underImage {
+    @apply
+    relative hidden h-[450px] w-[450px] transition-all duration-500 md:inline lg:h-[650px] lg:w-[600px]  
   }
 
 }

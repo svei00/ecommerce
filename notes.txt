@@ -137,3 +137,5 @@ References:
 * https://www.kindacode.com/article/tailwind-css-how-to-place-text-over-an-image/
 * https://pxhere.com/en/photo/1637037
 * https://www.javatpoint.com/how-to-remove-background-of-an-image-using-gimp
+* https://layoutsfortailwind.lalokalabs.dev/ui/fullscreen-background/
+* https://play.tailwindcss.com/CnpHH4Syb1 // This is part of the link above
