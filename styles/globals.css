@@ -127,7 +127,7 @@
     @apply
     relative
     min-h-screen
-    bg-cover 
+    bg-cover
     bg-no-repeat 
     bg-fixed bg-center
     bg-[url('../assets/images/background.png')]  
@@ -137,15 +137,36 @@
     top-1/2
     absolute
     -translate-y-1/2
-    h-full 
-    flex 
-    items-center 
-    justify-center
-    block 
+    /* h-full */
+    font-monkey
   }
 
   .underContainer h1 {
-    font-size: 46px;
+    @apply
+    text-5xl
+    font-semibold
+  }
+
+  .underContainer h1 span {
+    @apply
+    bg-gradient-to-r 
+    from-red-700 
+    via-yellow-400 
+    to-black 
+    bg-clip-text 
+    text-transparent
+  }
+
+  .launchTime {
+    @apply
+    flex
+  }
+
+  .launchTime div {
+    @apply
+    basis-[100px]
+    bg-gray-600 bg-opacity-50
+    my-2
   }
 
   .underImage {
