@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import dog from '../assets/images/dog-eat.png';
+import dog from '../assets/images/boxer.jpg';
 import Button from './Button';
 import { TbClick } from 'react-icons/tb';
 
@@ -34,15 +34,14 @@ const Under = () => {
                 title={<span className='inline-flex'>Learn More  <TbClick /></span>}  
                 onClick={() => ''}
             />
-            
-            <div className='underImage'>
-                <Image 
-                    src={dog}
-                    alt = 'Dog under Construction'
-                    layout = 'fill'
-                    objectFit='contain'
-                />
-            </div>
+        </div>
+        <div className='underImage'>
+            {/* <Image 
+                src={dog}
+                alt = 'Dog under Construction'
+                layout = 'fill'
+                objectFit='contain'
+            /> */}
         </div>
     </div>
   );

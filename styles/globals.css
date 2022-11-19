@@ -139,12 +139,13 @@
     -translate-y-1/2
     /* h-full */
     font-monkey
+    mx-4
+    font-semibold
   }
 
   .underContainer h1 {
     @apply
-    text-5xl
-    font-semibold
+    text-5xl    
   }
 
   .underContainer h1 span {
@@ -155,6 +156,7 @@
     to-black 
     bg-clip-text 
     text-transparent
+    animate-text
   }
 
   .launchTime {
@@ -165,13 +167,30 @@
   .launchTime div {
     @apply
     basis-[100px]
-    bg-gray-600 bg-opacity-50
-    my-2
+    /* bg-gray-600 bg-opacity-50 */
+    backdrop-contrast-200 bg-gray-400/75
+    m-4
+    text-center
+    rounded-md
+  }
+
+  .launchTime p {
+    @apply
+    text-2xl
+    
   }
 
   .underImage {
     @apply
-    relative hidden h-[450px] w-[450px] transition-all duration-500 md:inline lg:h-[650px] lg:w-[600px]  
+    absolute
+    right-[10%]
+    bottom-1/4
+    hidden 
+    w-[600px] 
+    h-[300px] 
+    md:inline 
+    lg:w-[800px] 
+    lg:h-[400px]
   }
 
 }
