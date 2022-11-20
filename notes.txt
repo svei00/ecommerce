@@ -97,20 +97,22 @@
        - import { user, account } from 'next-auth-sanity/schemas'; on /sanity_folder/schemas/schemas.js after localBlockContent.
     b. In types: schemaTypes.concat add at the very final the user and account.
     c. In Sanity.io go to API, add CORS origin, then put the URL in the example: http://localhost:3000/ and check allow.
-25. Deploying the site: 6:42
+25. Install daysjs library for the dates.
+    a. npm: npm i dayjs or yarn: yarn add dayjs
+26. Deploying the site: 6:42
     a. Go to Sanity Studio folder where you install Sanity Stydio.
        - Type: sanity deploy.
        - Type: name_of_app.
        - When success you'll see the sanity url gives you.
        - Make sure you won't commit the sanity node_modules one way to do it is in gitignore: /sanity_folder/node_modules
-26. One way to deploy our site is via github
+27. One way to deploy our site is via github
     a. Create a repositiry
     b. Create repository in your computer: git remote add origin your_repository_address.git
     c. git add . // In order to add everything
     d. git status in order to see the files you're going to commit.
     e. git commit -m 'Build has been completed!'
     f. git push
-27. Deploying via Vercel (Also you can do via nelifly or hostinger).
+28. Deploying via Vercel (Also you can do via nelifly or hostinger).
     a. Go to vercel.com/dashboard (You can login with your github account).
     b. Import the latest project and import.
     c. Very important add the enviroment variables like the localhost/3000 (.env file) to the url of your site. Then add one by one
@@ -139,3 +141,7 @@ References:
 * https://www.javatpoint.com/how-to-remove-background-of-an-image-using-gimp
 * https://layoutsfortailwind.lalokalabs.dev/ui/fullscreen-background/
 * https://play.tailwindcss.com/CnpHH4Syb1 // This is part of the link above
+* https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/css/images
+* https://www.youtube.com/watch?v=kTWJypbcSLI // Countdown
+* https://www.epochconverter.com/ // Time Converter
+* https://day.js.org/ // Library for dates.
