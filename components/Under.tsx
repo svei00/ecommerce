@@ -19,13 +19,13 @@ const Under = ({countdownTimeStampMS}) => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-        updateRemainingTime({countdownTimeStampMS});
+        updateRemainingTime(countdownTimeStampMS);
     }, 1000);
     return () => clearInterval(intervalId);
-  },[countdownTimeStampMS])
+  },[countdownTimeStampMS]);
 
   function updateRemainingTime(countdown) {
-    setRemainingTime(getRemainingTimeUntilMsTimeStamp(countdown))
+    setRemainingTime(getRemainingTimeUntilMsTimeStamp(countdown));
   }
 
   return (

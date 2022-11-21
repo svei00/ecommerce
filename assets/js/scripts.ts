@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export const getCurrentYear = () => {
     return new Date().getFullYear();
   };
@@ -6,24 +8,52 @@ export const getCurrentYear = () => {
     
     const timestampDayjs = dayjs(timeStampMs);
     const nowDayjs = dayjs()
+
+    if(timestampDayjs.isBefore(nowDayjs)) {
+      return {
+        seconds: '00',
+        minutes: '00',
+        hours: '00',
+        days: '00'
+      }
+    }
     
     return {
-      seconds: seconds,
-      minutes: minutes,
-      hours: hours,
-      days: days
+      seconds: getRemainingSeconds(nowDayjs, timestampDayjs),
+      minutes: getRemainingMinutes(nowDayjs, timestampDayjs),
+      hours: getRemainingHours(nowDayjs, timestampDayjs),
+      days: getRemainingDays(nowDayjs, timestampDayjs)
     };
+  }
 
-    const countDownDate = new Date('Jan 1, 2023 00:00:00').getTime();
-    const x = setInterval(function(){
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-  
-      const secs = Math.floor((distance / (1000 * 60 )) / 1000 );
-      const minutes = Math.floor((distance / (1000 * 60 * 60)) / (1000 * 60));
-      const hours = Math.floor((distance / (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  
-   }, 1000)
+  function getRemainingSeconds(nowDayjs, timestampDayjs) {
+    // -> 80s = 1m 20s we solve with module 
+    const seconds = timestampDayjs.diff(nowDayjs, 'seconds') % 60;
+    return padWithZeros(seconds, 2);
+  }
+
+  function getRemainingMinutes(nowDayjs, timestampDayjs) {
+    const minutes = timestampDayjs.diff(nowDayjs, 'minutes') % 60;
+    return padWithZeros(minutes, 2);
+  }
+
+  function getRemainingHours(nowDayjs, timestampDayjs) {
+    const hours = timestampDayjs.diff(nowDayjs, 'hours') % 24;
+    return padWithZeros(hours, 2);
+  }
+
+  function getRemainingDays(nowDayjs, timestampDayjs) {
+    const days = timestampDayjs.diff(nowDayjs, 'days');
+    return padWithZeros(days, 2);
+  }
+
+  function padWithZeros(number, minLength) {
+    const numberString = number.toString();
+
+    if(numberString.length >= minLength) {
+      return numberString;
+    } else {
+      return '0'.repeat(minLength - numberString.length) + numberString;
+    }
 
   }

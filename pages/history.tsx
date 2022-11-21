@@ -6,7 +6,7 @@ const History = () => {
   return (
     <div>
         <Header />
-        <Under />
+        <Under countdownTimeStampMS = {1672560000000} />
     </div>
   )
   
