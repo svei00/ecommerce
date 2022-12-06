@@ -1,5 +1,5 @@
 interface Props {
-    title: string;
+    title: any;
     onClick?: () => void; // The question mark means it nos required.
     width?: string;
     loading?: boolean;

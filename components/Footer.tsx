@@ -4,7 +4,7 @@ import { FaSignInAlt } from 'react-icons/fa';
 import { SiWhatsapp } from 'react-icons/si'
 import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline';
 import Button from './Button';
-import ItemsContainer from './itemsContainer';
+import ItemsContainer from './ItemsContainer';
 import SocialIcons from './SocialIcons';
 import { Icons } from "./Menu";
 
@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className='bg-gray-900 text-white'>
       <div className='md:flex md:justify-between md:items-center sm:pm-12 px-4 bg-[#ffffff19] py-7'>
           <h1 className='lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5'>
-              Croquetas <span className='bg-gradient-to-r from-red-700 via-yellow-400 to-black bg-clip-text text-transparent'>"El Kilo".</span>
+              Croquetas <span className='bg-gradient-to-r from-red-700 via-yellow-400 to-black bg-clip-text text-transparent'>&quot;El Kilo&quot;.</span>
           </h1>
           <div className="display: inline-flex pl-2 border border-slate-300 rounded-md md:flex md:justify-between md:items-center sm:justify-between sm:items-center bg-white" >
             <label><SiWhatsapp className='text-gray-800 tracking-widest'/></label>

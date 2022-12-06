@@ -68,7 +68,7 @@ function Checkout() {
   return (
     <div className='min-h-screen overflow-hidden bg-[#fff]'>
         <Head>
-            <title>Cart - Croquetas "El Kilo" 🛒</title>
+            <title>Cart - Croquetas &quot;El Kilo&quot; 🛒</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />

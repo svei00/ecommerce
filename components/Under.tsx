@@ -32,7 +32,7 @@ const Under = ({countdownTimeStampMS}) => {
     <div className='underConstruction'>
         <div className='underContainer'>
             <p>Under Construction</p>
-            <h1>We're <span>Launching</span> Soon!!</h1>
+            <h1>We&apos;re <span>Launching</span> Soon!!</h1>
             
             <div className='launchTime'>
                 <div>

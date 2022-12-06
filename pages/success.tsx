@@ -49,7 +49,7 @@ function Success ({ products }: Props) {
     return (
     <div>
         <Head>
-            <title>Thank you!! - Croquetas "El Kilo"</title>
+            <title>Thank you!! - Croquetas &quot;El Kilo&quot;</title>
             <link rel='icon' href='/favicon.ico' />
         </Head>
         <header className='mx-auto max-w-xl'>
@@ -95,7 +95,7 @@ function Success ({ products }: Props) {
                     <div className='space-y-2 pb-3'>
                         <p>Your order is confirmed</p>
                         <p className='text-sm text-gray-600'>
-                            We've accepted your order, and we're getting it ready. Come Back
+                            We&apos;ve accepted your order&apos; and we&apos;re getting it ready. Come Back
                             to this page for updates on your shipment status.
                         </p>
                     </div>
@@ -108,7 +108,7 @@ function Success ({ products }: Props) {
                 <div className='my-4 mx-4 space-y-2 rounded-md border border-gray-300 p-4 lg:ml-14'>
                     <p>Order Updates</p>
                     <p className='text-sm  text-gray-600'>
-                        You'll get shipping and delivery updates by email and text
+                        You&apos;ll get shipping and delivery updates by email and text
                     </p>
                 </div>
                 <div className='mx-4 flex flex-col items-center justify-between text-sm lg:ml-14 lg:flex-row'>

@@ -31,7 +31,7 @@ const Header = () => {
         <div className='hidden flex-1 items-center justify-center space-x-8 md:flex'>
             <a className='headerLink link' href='/products' >Products</a>
             <a className='headerLink link' href='/explore' >Explore</a>
-            <a className='headerLink link' href='/history' >History</a>
+            <Link className='headerLink link' href='/history' >History</Link>
             <a className='headerLink link' href='/mission' >Our Mission</a>
         </div>
         <div className='flex items-center justify-center gap-x-4 md:w-1/5'>

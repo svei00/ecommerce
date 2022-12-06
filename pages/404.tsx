@@ -23,10 +23,10 @@ const Error = () => {
                         <h2 className="bg-gradient-to-r bg-clip-text  text-transparent 
                          from-red-600 via-yellow-500 to-black
                          animate-text text-4xl font-semibold font-monkey ">
-                            404 - You've taken the wrong turn</h2>
+                            404 - You&apos;ve taken the wrong turn</h2>
                     </div>
                     <div className='absolute bottom-0 left-0 right-0 px-4 py-2'>
-                        <p className="text-2xl max-w-xl mx-auto mt-4 text-left lg:text-center font-monkey">Looks like you're looking for your treats</p>
+                        <p className="text-2xl max-w-xl mx-auto mt-4 text-left lg:text-center font-monkey">Looks like you&apos;re looking for your treats</p>
                         <p className="max-w-xl mx-auto mt-8 text-left lg:text-center font-monkey">Did you try lookiing throught our page? hit the links above!!</p>
                     </div>                            
                 </div>
