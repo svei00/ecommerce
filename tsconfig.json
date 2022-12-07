@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/Item.jsx", "components/SocialIcons.jsx", "components/Menu.js"  ],
+, "components/Item.jsx", "components/SocialIcons.jsx", "components/Menu.js", "pages/_app.jsx", "components/Tabs.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from '../redux/store';
 import { Toaster } from 'react-hot-toast';
 import { SessionProvider } from "next-auth/react";
-import { Session } from 'inspector';
+import { Session } from 'next-auth';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{session: Session;}>) {
   return (

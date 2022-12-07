@@ -12,6 +12,16 @@ export default function Tabs() {
    const [categories, setCategories] = useState([]);
 
    useEffect(() => {
+
+      function loadContent() {
+        console.log('Sample');
+      }
+
+      // Create an scoped async function in the hook
+      async function anyNameFunction() {
+        await loadContent();
+      }
+    
     fetch(fetchCategories)
       .then((res) => res.json())
       .then((data) => {
