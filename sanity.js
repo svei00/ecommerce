@@ -18,10 +18,10 @@ export const sanityClient = createClient(config);
 // https://www.sanity.io/docs/image-url
 export const urlFor = (source) => createImageUrlBuilder(config).image(source);
 
-const client = sanityClient({
-    projectId: process.env.projectID,
-    dataset: 'your dataset',
-    token: 'Sanity build token',
-    apiVersion: 'v1',
-    useCdn: false // `false` if you want to ensure fresh data
-  })
+// const client = sanityClient({
+//     projectId: process.env.projectID,
+//     dataset: 'your dataset',
+//     token: 'Sanity build token',
+//     apiVersion: 'v1',
+//     useCdn: false // `false` if you want to ensure fresh data
+//   })
