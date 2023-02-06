@@ -16,4 +16,5 @@ module.exports = {
   images: {
     domains: ['/assets/images', 'cdn.sanity.io', 'lh3.googleusercontent.com'], // In case to load images from http need to put the domain ex. informador.mx
   },
+  distDir: 'build',
 };
