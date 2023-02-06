@@ -118,6 +118,12 @@
     c. Very important add the enviroment variables like the localhost/3000 (.env file) to the url of your site. Then add one by one
        - We don't need STRIPE_SIGNING_SECRET
     d. Hit Deploy.
+    e. Deploy manually in Netlify:
+       https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/
+       1. npm install -g netlify-cli // Install Netlify Globally
+       2. ntl login // Login
+       3. Go to root directory
+       4. ntl init
 
 References:
 * https://www.youtube.com/watch?v=DCTuw2P6DCU&t=527s
