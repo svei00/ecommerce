@@ -7,14 +7,14 @@
 //   }
 // }
 
-const { ModuleKind } = require('typescript');
+const { ModuleKind } = require("typescript");
 
 // module.exports = nextConfig
 
 module.exports = {
-  reactStrickmode: true,
+  reactStrictMode: true,
   images: {
-    domains: ['/assets/images', 'cdn.sanity.io', 'lh3.googleusercontent.com'], // In case to load images from http need to put the domain ex. informador.mx
+    domains: ["/assets/images", "cdn.sanity.io", "lh3.googleusercontent.com"], // In case to load images from http need to put the domain ex. informador.mx
   },
-  distDir: 'build',
+  distDir: "build",
 };
