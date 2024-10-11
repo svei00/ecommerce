@@ -9,15 +9,13 @@ function Basket() {
     if (items.length === 0 ) return null;
 
     return (
-        <Link href='/checkout' legacyBehavior>
-            <a className='shoppingCartOut'>
-                {items.length > 0 && (
-                    <span className='shoppingCartIn'>
-                        {items.length}
-                    </span>
-                )}
-                <ShoppingBagIcon className='headerIcon h-8 w-8'/>
-            </a>    
+        <Link href='/checkout' className='shoppingCartOut'>
+            {items.length > 0 && (
+                <span className='shoppingCartIn'>
+                    {items.length}
+                </span>
+            )}
+            <ShoppingBagIcon className='headerIcon h-8 w-8'/>
         </Link>
     );
 }
