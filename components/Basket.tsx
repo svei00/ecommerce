@@ -9,8 +9,7 @@ function Basket() {
     if (items.length === 0) return null;
 
     return (
-        <Link href='/checkout'>
-            {/* Wrap the div with an anchor tag */}
+        <Link href='/checkout' passHref>
             <a>
                 <div className='shoppingCartOut'>
                     {items.length > 0 && (
