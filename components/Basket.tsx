@@ -10,17 +10,14 @@ function Basket() {
 
     return (
         <Link href="/checkout">
-            {/* Ensure there's an anchor element */}
-            <a>
-                <div className='shoppingCartOut'>
-                    {items.length > 0 && (
-                        <span className='shoppingCartIn'>
-                            {items.length}
-                        </span>
-                    )}
-                    <ShoppingBagIcon className='headerIcon h-8 w-8' />
-                </div>
-            </a>
+            <div className='shoppingCartOut'>
+                {items.length > 0 && (
+                    <span className='shoppingCartIn'>
+                        {items.length}
+                    </span>
+                )}
+                <ShoppingBagIcon className='headerIcon h-8 w-8' />
+            </div>
         </Link>
     );
 }
