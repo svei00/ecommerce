@@ -12,7 +12,7 @@ const { ModuleKind } = require("typescript");
 // module.exports = nextConfig
 
 module.exports = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     domains: ["/assets/images", "cdn.sanity.io", "lh3.googleusercontent.com"], // In case to load images from http need to put the domain ex. informador.mx
   },
