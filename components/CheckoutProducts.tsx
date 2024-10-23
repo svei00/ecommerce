@@ -26,12 +26,11 @@ function CheckoutProducts({id, items}: Props) {
     return (
         <div className="flex flex-col gap-x-4 border-b border-gray-300 pb-5 lg:flex-row lg:items-center">
             <div className="relative h-44 w-44">
-                {/* Ensure that the 'src' and other props for Image are valid */}
                 {items[0]?.image[0] && (
                     <Image 
-                        src={urlFor(items[0].image[0]).url()} // Ensure this returns a valid URL
-                        layout='fill' // Correct usage in Next.js 14.x
-                        objectFit="contain"
+                        src={urlFor(items[0].image[0]).url()}
+                        fill // Replaces layout="fill"
+                        style={{ objectFit: "contain" }} // Replaces objectFit="contain"
                         alt="Product"
                     />
                 )}
