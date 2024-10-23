@@ -26,25 +26,28 @@ function CheckoutProducts({id, items}: Props) {
     return (
         <div className="flex flex-col gap-x-4 border-b border-gray-300 pb-5 lg:flex-row lg:items-center">
             <div className="relative h-44 w-44">
-                <Image 
-                    src={urlFor(items[0].image[0]).url()}
-                    layout='fill'
-                    objectFit="contain"
-                    alt="Products"
-                />
+                {/* Ensure that the 'src' and other props for Image are valid */}
+                {items[0]?.image[0] && (
+                    <Image 
+                        src={urlFor(items[0].image[0]).url()} // Ensure this returns a valid URL
+                        layout='fill' // Correct usage in Next.js 14.x
+                        objectFit="contain"
+                        alt="Product"
+                    />
+                )}
             </div>
 
             <div className='flex flex-1 items-end lg:items-center'>
                 <div className="flex-1 space-y-4">
                     <div className="flex flex-col gap-x-8 text-xl lg:flex-row lg:text-2xl">
-                        <h4 className='font-semibold lg:w-96' >{items[0].title}</h4>
+                        <h4 className='font-semibold lg:w-96'>{items[0].title}</h4>
                         <p className='flex items-end gap-x-1 font-semibold'>
                             {items.length}
                             <ChevronDownIcon className='h-6 w-6 text-blue-500' />
                         </p>
                     </div>
 
-                    <p className="flex cursor-pointer items-end text-blue-500 hove:underline">
+                    <p className="flex cursor-pointer items-end text-blue-500 hover:underline">
                         Show Product Details
                         <ChevronDownIcon className="h-6 w-6" />
                     </p>
@@ -52,7 +55,13 @@ function CheckoutProducts({id, items}: Props) {
                 <div className="flex flex-col items-end space-y-4">
                     <h4 className="text-xl font-semibold lg:text-2xl">
                         <Currency 
-                            value={items.reduce((total, item) => total + item.price, 0)} displayType={'text'} decimalSeparator="." decimalScale={2} thousandSeparator={true}  fixedDecimalScale={true} prefix={'$'}
+                            value={items.reduce((total, item) => total + item.price, 0)} 
+                            displayType={'text'} 
+                            decimalSeparator="." 
+                            decimalScale={2} 
+                            thousandSeparator={true}  
+                            fixedDecimalScale={true} 
+                            prefix={'$'}
                         />
                     </h4>
                     <button
@@ -64,7 +73,7 @@ function CheckoutProducts({id, items}: Props) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default CheckoutProducts
+export default CheckoutProducts;
