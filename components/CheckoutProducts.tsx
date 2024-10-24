@@ -1,5 +1,4 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import { urlFor } from "../sanity";
 import Currency from 'react-currency-format';
 import { useDispatch } from "react-redux";
@@ -26,11 +25,11 @@ function CheckoutProducts({id, items}: Props) {
     return (
         <div className="flex flex-col gap-x-4 border-b border-gray-300 pb-5 lg:flex-row lg:items-center">
             <div className="relative h-44 w-44">
+                {/* Replace Image component with img tag */}
                 {items[0]?.image[0] && (
-                    <Image 
-                        src={urlFor(items[0].image[0]).url()}
-                        fill // Replaces layout="fill"
-                        style={{ objectFit: "contain" }} // Replaces objectFit="contain"
+                    <img 
+                        src={urlFor(items[0].image[0]).url()} 
+                        style={{ objectFit: "contain", width: "100%", height: "100%" }} 
                         alt="Product"
                     />
                 )}
