@@ -1,4 +1,3 @@
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { urlFor } from "../sanity";
 import Currency from 'react-currency-format';
 import { useDispatch } from "react-redux";
@@ -25,7 +24,6 @@ function CheckoutProducts({id, items}: Props) {
     return (
         <div className="flex flex-col gap-x-4 border-b border-gray-300 pb-5 lg:flex-row lg:items-center">
             <div className="relative h-44 w-44">
-                {/* Replace Image component with img tag */}
                 {items[0]?.image[0] && (
                     <img 
                         src={urlFor(items[0].image[0]).url()} 
@@ -41,13 +39,19 @@ function CheckoutProducts({id, items}: Props) {
                         <h4 className='font-semibold lg:w-96'>{items[0].title}</h4>
                         <p className='flex items-end gap-x-1 font-semibold'>
                             {items.length}
-                            <ChevronDownIcon className='h-6 w-6 text-blue-500' />
+                            {/* Replace ChevronDownIcon with SVG */}
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6 text-blue-500">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 9l-7.5 7.5L4.5 9" />
+                            </svg>
                         </p>
                     </div>
 
                     <p className="flex cursor-pointer items-end text-blue-500 hover:underline">
                         Show Product Details
-                        <ChevronDownIcon className="h-6 w-6" />
+                        {/* Replace ChevronDownIcon with SVG */}
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 9l-7.5 7.5L4.5 9" />
+                        </svg>
                     </p>
                 </div>
                 <div className="flex flex-col items-end space-y-4">
