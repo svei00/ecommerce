@@ -9,8 +9,8 @@ interface Props {
     noIcon?: boolean;
 }
 
-// Define Button as a functional component using React.FC<Props>
-const Button: React.FC<Props> = ({ title, onClick, width, loading, padding, noIcon }) => {
+// Define Button with direct return type of React.ReactElement
+function Button({ title, onClick, width, loading, padding, noIcon }: Props): React.ReactElement {
     return (
         <button
             className={`ease group relative z-30 box-border inline-flex ${width ? width : 'w-auto'} ${padding} cursor-pointer items-center justify-center overflow-hidden rounded bg-gray-700 bg-gradient-to-r from-red-600 to-yellow-600 px-8 py-3 font-bold text-white transition-all duration-300 focus:outline-none`}
@@ -39,6 +39,6 @@ const Button: React.FC<Props> = ({ title, onClick, width, loading, padding, noIc
             </span>
         </button>
     );
-};
+}
 
 export default Button;
