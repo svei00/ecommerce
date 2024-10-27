@@ -2,14 +2,15 @@ import React from 'react';
 
 interface Props {
     title: React.ReactNode;
-    onClick?: () => void; // Optional click handler
+    onClick?: () => void;
     width?: string;
     loading?: boolean;
     padding?: string;
     noIcon?: boolean;
 }
 
-function Button({ title, onClick, width, loading, padding, noIcon }: Props): React.ReactElement {
+// Define Button as a functional component using React.FC<Props>
+const Button: React.FC<Props> = ({ title, onClick, width, loading, padding, noIcon }) => {
     return (
         <button
             className={`ease group relative z-30 box-border inline-flex ${width ? width : 'w-auto'} ${padding} cursor-pointer items-center justify-center overflow-hidden rounded bg-gray-700 bg-gradient-to-r from-red-600 to-yellow-600 px-8 py-3 font-bold text-white transition-all duration-300 focus:outline-none`}
@@ -38,6 +39,6 @@ function Button({ title, onClick, width, loading, padding, noIcon }: Props): Rea
             </span>
         </button>
     );
-}
+};
 
 export default Button;
