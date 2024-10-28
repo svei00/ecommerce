@@ -9,10 +9,11 @@ interface Props {
     noIcon?: boolean;
 }
 
-// Define Button with direct return type of React.ReactElement
-function Button({ title, onClick, width, loading, padding, noIcon }: Props): React.ReactElement {
+const Button = React.forwardRef<HTMLButtonElement, Props>(
+  ({ title, onClick, width, loading, padding, noIcon }, ref): React.ReactElement => {
     return (
         <button
+            ref={ref}
             className={`ease group relative z-30 box-border inline-flex ${width ? width : 'w-auto'} ${padding} cursor-pointer items-center justify-center overflow-hidden rounded bg-gray-700 bg-gradient-to-r from-red-600 to-yellow-600 px-8 py-3 font-bold text-white transition-all duration-300 focus:outline-none`}
             onClick={onClick}
         >
@@ -39,6 +40,9 @@ function Button({ title, onClick, width, loading, padding, noIcon }: Props): Rea
             </span>
         </button>
     );
-}
+  }
+);
+
+Button.displayName = 'Button'; // This is necessary when using forwardRef
 
 export default Button;
