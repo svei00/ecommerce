@@ -7,10 +7,11 @@ interface Props {
     loading?: boolean;
     padding?: string;
     noIcon?: boolean;
+    children?: React.ReactNode;  // <-- Add children here
 }
 
 const Button = React.forwardRef<HTMLButtonElement, Props>(
-  ({ title, onClick, width, loading, padding, noIcon }, ref): React.ReactElement => {
+  ({ title, onClick, width, loading, padding, noIcon, children }, ref) => {
     return (
         <button
             ref={ref}
@@ -37,12 +38,13 @@ const Button = React.forwardRef<HTMLButtonElement, Props>(
                     </svg>
                 )}
                 {loading ? 'Loading...' : title}
+                {children}
             </span>
         </button>
     );
   }
 );
 
-Button.displayName = 'Button'; // This is necessary when using forwardRef
+Button.displayName = 'Button';
 
 export default Button;
