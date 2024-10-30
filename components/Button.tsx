@@ -10,7 +10,7 @@ interface Props {
     children?: React.ReactNode;
 }
 
-const Button = ({ title, onClick, width, loading, padding, noIcon, children }: Props): JSX.Element => {
+const Button: React.FC<Props> = ({ title, onClick, width, loading, padding, noIcon, children }) => {
     return (
         <button
             className={`ease group relative z-30 box-border inline-flex ${width ? width : 'w-auto'} ${padding} cursor-pointer items-center justify-center overflow-hidden rounded bg-gray-700 bg-gradient-to-r from-red-600 to-yellow-600 px-8 py-3 font-bold text-white transition-all duration-300 focus:outline-none`}
@@ -41,5 +41,3 @@ const Button = ({ title, onClick, width, loading, padding, noIcon, children }: P
         </button>
     );
 };
-
-export default Button;
